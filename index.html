@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Gandhi | Personal Website & SAT Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        .text-accent { color: #ff69b4; }
+        .bg-accent { background-color: #ff69b4; }
+        .border-accent { border-color: #ff69b4; }
+        
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Quiz Specific Styles */
+        .quiz-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .option-btn {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            transition: all 0.2s ease;
+        }
+        .option-btn:hover {
+            border-color: #ff69b4;
+            background-color: rgba(255, 105, 180, 0.1);
+        }
+        .correct { background-color: #065f46 !important; border-color: #10b981 !important; }
+        .incorrect { background-color: #7f1d1d !important; border-color: #ef4444 !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-[#121212]/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-accent">RG</div>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#experience" class="hover:text-accent transition">Experience</a>
+                <a href="#skills" class="hover:text-accent transition">Skills</a>
+                <a href="#quiz" class="hover:text-accent transition">SAT Prep</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="fade-in">
+            <div class="w-48 h-48 rounded-full border-4 border-accent overflow-hidden mb-8 mx-auto">
+                <img src="Assets/ProfilePic.jpeg" alt="Riya Gandhi" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Riya Gandhi</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8">Finance & Accounting Student at Rutgers University</p>
+            <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-4 bg-zinc-900/50">
+        <div class="max-w-4xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-accent pl-4">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                I am a high-achieving Bachelor of Science student in Finance & Accounting at Rutgers University, New Brunswick. 
+                With a background ranging from investment banking at Mizuho to tax consulting at KPMG, I bring a diverse 
+                and analytical perspective to the financial sector. [cite: 5]
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-accent pl-4 fade-in">Experience</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-zinc-800 p-8 rounded-xl border border-gray-700 fade-in">
+                    <span class="text-accent text-sm font-bold">June 2025 – August 2025</span>
+                    <h3 class="text-xl font-bold mt-2">Investment Banking Summer Analyst</h3>
+                    <p class="text-gray-400 mb-4">Mizuho Financial Group</p>
+                    <p class="text-gray-300 text-sm">Supported transactions totaling ~$4.2B+ in aggregate deal value. [cite: 5]</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-xl border border-gray-700 fade-in">
+                    <span class="text-accent text-sm font-bold">January 2025 – March 2025</span>
+                    <h3 class="text-xl font-bold mt-2">Tax Consulting Intern</h3>
+                    <p class="text-gray-400 mb-4">KPMG LLP</p>
+                    <p class="text-gray-300 text-sm">Assisted in preparing Schedule K-1s for 18 private equity engagements. [cite: 5]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-4 bg-zinc-900/50">
+        <div class="max-w-4xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-accent pl-4">Skills</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Microsoft Office Suite [cite: 5]</span>
+                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">QuickBooks [cite: 5]</span>
+                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Financial Modeling [cite: 5]</span>
+                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Bloomberg Market Concepts [cite: 5]</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="py-24 px-4">
+        <div class="max-w-3xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold mb-4 border-l-4 border-accent pl-4">Interactive SAT Math Prep</h2>
+            <p class="text-gray-400 mb-10">Test your skills with these SAT-style math questions.</p>
+            
+            <div id="quiz-container" class="quiz-card p-8 rounded-2xl shadow-xl">
+                <div id="question-box">
+                    <h3 id="question-text" class="text-xl font-semibold mb-6">Loading question...</h3>
+                    <div id="options-container" class="grid gap-4"></div>
+                </div>
+
+                <div id="feedback" class="mt-6 text-center font-bold hidden"></div>
+
+                <div id="result-box" class="hidden text-center">
+                    <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
+                    <p id="score-text" class="text-2xl mb-8 text-accent"></p>
+                    <button onclick="restartQuiz()" class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 text-center bg-zinc-900/50">
+        <div class="max-w-2xl mx-auto fade-in">
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <a href="mailto:rng65@scarletmail.rutgers.edu" class="inline-block bg-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition transform">Contact Me</a>
+            <div class="flex justify-center space-x-10 text-3xl mt-12">
+                <a href="https://linkedin.com/in/riya-gandhi-" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Riya Gandhi. [cite: 5]</p>
+    </footer>
+
+    <script>
+        // --- Animation Logic ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // --- Quiz Logic ---
+        const quizData = [
+            {
+                q: "If 3x + 6 = 18, what is the value of x?",
+                options: ["2", "4", "6", "8"],
+                correct: 1
+            },
+            {
+                q: "A line in the xy-plane passes through the origin and has a slope of 1/3. Which point lies on the line?",
+                options: "(3, 1)",
+                options: ["(1, 3)", "(3, 1)", "(3, 3)", "(1, 1)"],
+                correct: 1
+            },
+            {
+                q: "What is the area of a circle with a diameter of 10? (Use π ≈ 3.14)",
+                options: ["31.4", "78.5", "100", "314"],
+                correct: 1
+            },
+            {
+                q: "Solve for y: 2y - 5 = 11",
+                options: ["3", "6", "8", "16"],
+                correct: 2
+            },
+            {
+                q: "If a rectangular prism has a length of 4, width of 3, and height of 2, what is its volume?",
+                options: ["9", "12", "24", "48"],
+                correct: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let canAnswer = true;
+
+        function loadQuestion() {
+            canAnswer = true;
+            const feedback = document.getElementById('feedback');
+            feedback.classList.add('hidden');
+            
+            const qBox = document.getElementById('question-box');
+            const data = quizData[currentQuestion];
+            
+            document.getElementById('question-text').innerText = `Question ${currentQuestion + 1}: ${data.q}`;
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            data.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.innerText = opt;
+                btn.className = 'option-btn p-4 rounded-xl text-left font-medium';
+                btn.onclick = () => checkAnswer(index, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selected, btn) {
+            if (!canAnswer) return;
+            canAnswer = false;
+
+            const feedback = document.getElementById('feedback');
+            feedback.classList.remove('hidden');
+            
+            if (selected === quizData[currentQuestion].correct) {
+                score++;
+                btn.classList.add('correct');
+                feedback.innerText = "Correct! ✨";
+                feedback.className = "mt-6 text-center font-bold text-green-400";
+            } else {
+                btn.classList.add('incorrect');
+                feedback.innerText = "Incorrect. Next time!";
+                feedback.className = "mt-6 text-center font-bold text-red-400";
+            }
+
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showResults();
+                }
+            }, 1500);
+        }
+
+        function showResults() {
+            document.getElementById('question-box').classList.add('hidden');
+            document.getElementById('feedback').classList.add('hidden');
+            const resultBox = document.getElementById('result-box');
+            resultBox.classList.remove('hidden');
+            document.getElementById('score-text').innerText = `You scored ${score} out of ${quizData.length}`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('result-box').classList.add('hidden');
+            document.getElementById('question-box').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        // Initialize quiz
+        loadQuestion();
+    </script>
+</body>
+</html>
