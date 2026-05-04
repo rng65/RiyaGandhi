@@ -3,267 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Gandhi | Personal Website & SAT Prep</title>
+    <title>Riya Gandhi | Finance & Accounting Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: white;
-            scroll-behavior: smooth;
-        }
-        .text-accent { color: #ff69b4; }
-        .bg-accent { background-color: #ff69b4; }
-        .border-accent { border-color: #ff69b4; }
-        
-        /* Fade-in Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Quiz Specific Styles */
-        .quiz-card {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            transition: all 0.3s ease;
-        }
-        .option-btn {
-            background-color: #2d2d2d;
-            border: 1px solid #444;
-            transition: all 0.2s ease;
-        }
-        .option-btn:hover {
-            border-color: #ff69b4;
-            background-color: rgba(255, 105, 180, 0.1);
-        }
-        .correct { background-color: #065f46 !important; border-color: #10b981 !important; }
-        .incorrect { background-color: #7f1d1d !important; border-color: #ef4444 !important; }
+        :root { --pink: #ff69b4; --dark: #0a0a0a; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #ff69b4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-border:hover { border-color: var(--pink); box-shadow: 0 0 20px rgba(255, 105, 180, 0.2); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .option-card:hover { background: rgba(255, 105, 180, 0.15); border-color: var(--pink); transform: translateX(10px); }
+        #progress-bar { height: 6px; width: 0%; background: linear-gradient(to right, #ff69b4, #ffffff); transition: 0.4s; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-[#121212]/90 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-accent">RG</div>
-            <div class="space-x-6">
-                <a href="#about" class="hover:text-accent transition">About</a>
-                <a href="#experience" class="hover:text-accent transition">Experience</a>
-                <a href="#skills" class="hover:text-accent transition">Skills</a>
-                <a href="#quiz" class="hover:text-accent transition">SAT Prep</a>
-                <a href="#contact" class="hover:text-accent transition">Contact</a>
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span class="text-2xl font-extrabold tracking-tighter text-pink-500">RIYA GANDHI</span>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#about" class="hover:text-pink-500 transition">About</a>
+                <a href="#experience" class="hover:text-pink-500 transition">Experience</a>
+                <a href="#quiz" class="hover:text-pink-500 transition">SAT App</a>
+                <a href="#contact" class="hover:text-pink-500 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-        <div class="fade-in">
-            <div class="w-48 h-48 rounded-full border-4 border-accent overflow-hidden mb-8 mx-auto">
-                <img src="Assets/ProfilePic.jpeg" alt="Riya Gandhi" class="w-full h-full object-cover">
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <div class="inline-block px-4 py-1 rounded-full border border-pink-500/30 text-pink-500 text-xs font-bold mb-6 tracking-widest uppercase">Class of 2026</div>
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-6">Finance <br><span class="text-gradient">& Accounting</span></h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-lg leading-relaxed">Rutgers Business School student specializing in Valuation, M&A, and Tax Consulting.</p>
+                <div class="flex gap-4">
+                    <a href="#quiz" class="bg-pink-600 hover:bg-pink-500 px-8 py-4 rounded-full font-bold transition transform hover:scale-105 shadow-lg shadow-pink-500/20">Launch SAT App</a>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Riya Gandhi</h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8">Finance & Accounting Student at Rutgers University</p>
-            <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition">Contact Me</a>
+            <div class="relative fade-in flex justify-center">
+                <div class="absolute inset-0 bg-pink-500/10 blur-[120px] rounded-full"></div>
+                <div class="w-80 h-80 md:w-[450px] md:h-[450px] rounded-3xl overflow-hidden border border-white/10 relative z-10 shadow-2xl">
+                    <img src="Riya Gandhi Headshot.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000" alt="Riya Gandhi">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 px-4 bg-zinc-900/50">
-        <div class="max-w-4xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold mb-8 border-l-4 border-accent pl-4">About Me</h2>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                I am a high-achieving Bachelor of Science student in Finance & Accounting at Rutgers University, New Brunswick. 
-                With a background ranging from investment banking at Mizuho to tax consulting at KPMG, I bring a diverse 
-                and analytical perspective to the financial sector. [cite: 5]
-            </p>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 px-4">
+    <section id="experience" class="py-32 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 border-l-4 border-accent pl-4 fade-in">Experience</h2>
+            <h2 class="text-4xl font-bold mb-16 fade-in tracking-tight">Professional <span class="text-pink-500 italic">Trajectory</span></h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-zinc-800 p-8 rounded-xl border border-gray-700 fade-in">
-                    <span class="text-accent text-sm font-bold">June 2025 – August 2025</span>
-                    <h3 class="text-xl font-bold mt-2">Investment Banking Summer Analyst</h3>
-                    <p class="text-gray-400 mb-4">Mizuho Financial Group</p>
-                    <p class="text-gray-300 text-sm">Supported transactions totaling ~$4.2B+ in aggregate deal value. [cite: 5]</p>
+                <div class="glass p-8 rounded-2xl glow-border transition fade-in">
+                    <h3 class="text-2xl font-bold">Mizuho Financial Group</h3>
+                    <p class="text-gray-500 text-sm mb-4 italic">IB Summer Analyst (2025)</p>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>• Rotated across FIG and LCM groups.</li>
+                        <li>• Supported 10 transactions totaling ~$4.2B+ in deal value.</li>
+                    </ul>
                 </div>
-                <div class="bg-zinc-800 p-8 rounded-xl border border-gray-700 fade-in">
-                    <span class="text-accent text-sm font-bold">January 2025 – March 2025</span>
-                    <h3 class="text-xl font-bold mt-2">Tax Consulting Intern</h3>
-                    <p class="text-gray-400 mb-4">KPMG LLP</p>
-                    <p class="text-gray-300 text-sm">Assisted in preparing Schedule K-1s for 18 private equity engagements. [cite: 5]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 px-4 bg-zinc-900/50">
-        <div class="max-w-4xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold mb-12 border-l-4 border-accent pl-4">Skills</h2>
-            <div class="flex flex-wrap gap-4">
-                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Microsoft Office Suite [cite: 5]</span>
-                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">QuickBooks [cite: 5]</span>
-                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Financial Modeling [cite: 5]</span>
-                <span class="bg-accent/10 border border-accent text-accent px-6 py-2 rounded-full">Bloomberg Market Concepts [cite: 5]</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="quiz" class="py-24 px-4">
-        <div class="max-w-3xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold mb-4 border-l-4 border-accent pl-4">Interactive SAT Math Prep</h2>
-            <p class="text-gray-400 mb-10">Test your skills with these SAT-style math questions.</p>
-            
-            <div id="quiz-container" class="quiz-card p-8 rounded-2xl shadow-xl">
-                <div id="question-box">
-                    <h3 id="question-text" class="text-xl font-semibold mb-6">Loading question...</h3>
-                    <div id="options-container" class="grid gap-4"></div>
-                </div>
-
-                <div id="feedback" class="mt-6 text-center font-bold hidden"></div>
-
-                <div id="result-box" class="hidden text-center">
-                    <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
-                    <p id="score-text" class="text-2xl mb-8 text-accent"></p>
-                    <button onclick="restartQuiz()" class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition">Restart Quiz</button>
+                <div class="glass p-8 rounded-2xl glow-border transition fade-in">
+                    <h3 class="text-2xl font-bold">KPMG LLP</h3>
+                    <p class="text-gray-500 text-sm mb-4 italic">Tax Consulting Intern (2025)</p>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>• Prepared K-1s for 18 Private Equity engagements.</li>
+                        <li>• Automated reconciliations using the AMP Platform.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-4 text-center bg-zinc-900/50">
+    <section id="quiz" class="py-32 px-6 bg-zinc-900/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-end mb-12 fade-in">
+                <div>
+                    <h2 class="text-5xl font-black italic uppercase">SAT <span class="text-pink-500">Quant</span></h2>
+                    <p class="text-gray-500 mt-2">Digital SAT Math Diagnostic Tool</p>
+                </div>
+                <div id="streak-display" class="text-2xl font-bold text-pink-500 text-right">0 🔥</div>
+            </div>
+            <div class="glass rounded-3xl overflow-hidden fade-in border-pink-500/20 border-2">
+                <div id="progress-bar"></div>
+                <div id="quiz-container" class="p-12"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 text-center">
         <div class="max-w-2xl mx-auto fade-in">
-            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-            <a href="mailto:rng65@scarletmail.rutgers.edu" class="inline-block bg-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition transform">Contact Me</a>
-            <div class="flex justify-center space-x-10 text-3xl mt-12">
-                <a href="https://linkedin.com/in/riya-gandhi-" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com" target="_blank" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+            <h2 class="text-5xl font-black mb-8 tracking-tighter">LET'S WORK <span class="text-pink-500">TOGETHER.</span></h2>
+            <div class="flex justify-center gap-12 text-4xl">
+                <a href="mailto:rng65@scarletmail.rutgers.edu" class="hover:text-pink-500 transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/riya-gandhi-" target="_blank" class="hover:text-pink-500 transition"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
-
-    <footer class="py-10 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Riya Gandhi. [cite: 5]</p>
-    </footer>
 
     <script>
-        // --- Animation Logic ---
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // --- Quiz Logic ---
-        const quizData = [
-            {
-                q: "If 3x + 6 = 18, what is the value of x?",
-                options: ["2", "4", "6", "8"],
-                correct: 1
-            },
-            {
-                q: "A line in the xy-plane passes through the origin and has a slope of 1/3. Which point lies on the line?",
-                options: "(3, 1)",
-                options: ["(1, 3)", "(3, 1)", "(3, 3)", "(1, 1)"],
-                correct: 1
-            },
-            {
-                q: "What is the area of a circle with a diameter of 10? (Use π ≈ 3.14)",
-                options: ["31.4", "78.5", "100", "314"],
-                correct: 1
-            },
-            {
-                q: "Solve for y: 2y - 5 = 11",
-                options: ["3", "6", "8", "16"],
-                correct: 2
-            },
-            {
-                q: "If a rectangular prism has a length of 4, width of 3, and height of 2, what is its volume?",
-                options: ["9", "12", "24", "48"],
-                correct: 2
-            }
+        const quizItems = [
+            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "2"], correct: 1, exp: "4x - 8 = 3x + 5. Subtract 3x: x - 8 = 5. Add 8: x = 13." },
+            { q: "A circle has a circumference of 10π. What is its area?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "C = 2πr = 10π → r = 5. Area = πr² = π(5²) = 25π." },
+            { q: "What is the slope of the line 3y - 9x = 12?", options: ["3", "-3", "9", "4"], correct: 0, exp: "3y = 9x + 12 → y = 3x + 4. Slope (m) = 3." }
         ];
 
-        let currentQuestion = 0;
-        let score = 0;
-        let canAnswer = true;
+        let idx = 0, score = 0, streak = 0;
 
-        function loadQuestion() {
-            canAnswer = true;
-            const feedback = document.getElementById('feedback');
-            feedback.classList.add('hidden');
-            
-            const qBox = document.getElementById('question-box');
-            const data = quizData[currentQuestion];
-            
-            document.getElementById('question-text').innerText = `Question ${currentQuestion + 1}: ${data.q}`;
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.innerHTML = '';
-
-            data.options.forEach((opt, index) => {
-                const btn = document.createElement('button');
-                btn.innerText = opt;
-                btn.className = 'option-btn p-4 rounded-xl text-left font-medium';
-                btn.onclick = () => checkAnswer(index, btn);
-                optionsContainer.appendChild(btn);
-            });
+        function startQuiz() {
+            const container = document.getElementById('quiz-container');
+            const progress = document.getElementById('progress-bar');
+            progress.style.width = `${(idx / quizItems.length) * 100}%`;
+            if(idx >= quizItems.length) { showResults(); return; }
+            const item = quizItems[idx];
+            container.innerHTML = `<h3 class="text-2xl font-bold mb-8">${item.q}</h3><div class="grid gap-4">${item.options.map((opt, i) => `<div class="option-card p-6 rounded-2xl font-bold" onclick="check(${i})">${opt}</div>`).join('')}</div>`;
         }
 
-        function checkAnswer(selected, btn) {
-            if (!canAnswer) return;
-            canAnswer = false;
-
-            const feedback = document.getElementById('feedback');
-            feedback.classList.remove('hidden');
-            
-            if (selected === quizData[currentQuestion].correct) {
-                score++;
-                btn.classList.add('correct');
-                feedback.innerText = "Correct! ✨";
-                feedback.className = "mt-6 text-center font-bold text-green-400";
-            } else {
-                btn.classList.add('incorrect');
-                feedback.innerText = "Incorrect. Next time!";
-                feedback.className = "mt-6 text-center font-bold text-red-400";
-            }
-
-            setTimeout(() => {
-                currentQuestion++;
-                if (currentQuestion < quizData.length) {
-                    loadQuestion();
-                } else {
-                    showResults();
-                }
-            }, 1500);
+        function check(selected) {
+            const item = quizItems[idx];
+            const correct = selected === item.correct;
+            if(correct) { score++; streak++; } else { streak = 0; }
+            document.getElementById('streak-display').innerText = `${streak} 🔥`;
+            document.getElementById('quiz-container').innerHTML = `<div class="text-center py-8"><h4 class="text-3xl font-bold mb-4">${correct ? 'Correct! ✨' : 'Incorrect ❌'}</h4><p class="text-gray-400 mb-8 italic">"${item.exp}"</p><button onclick="idx++; startQuiz();" class="bg-white text-black px-12 py-3 rounded-full font-black">Next Question</button></div>`;
         }
 
         function showResults() {
-            document.getElementById('question-box').classList.add('hidden');
-            document.getElementById('feedback').classList.add('hidden');
-            const resultBox = document.getElementById('result-box');
-            resultBox.classList.remove('hidden');
-            document.getElementById('score-text').innerText = `You scored ${score} out of ${quizData.length}`;
+            document.getElementById('quiz-container').innerHTML = `<div class="text-center"><h2 class="text-5xl font-black mb-4">Assessment Complete</h2><div class="text-pink-500 text-7xl font-black mb-8">${Math.round((score/quizItems.length)*100)}%</div><button onclick="location.reload()" class="bg-pink-600 px-12 py-4 rounded-full font-bold">Restart Assessment</button></div>`;
         }
-
-        function restartQuiz() {
-            currentQuestion = 0;
-            score = 0;
-            document.getElementById('result-box').classList.add('hidden');
-            document.getElementById('question-box').classList.remove('hidden');
-            loadQuestion();
-        }
-
-        // Initialize quiz
-        loadQuestion();
+        startQuiz();
     </script>
 </body>
 </html>
