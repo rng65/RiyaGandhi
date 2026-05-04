@@ -3,89 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Gandhi | Portfolio & SAT Mastery</title>
+    <title>Riya Gandhi | Finance & SAT Mastery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --pink: #ff69b4; --dark: #0a0a0a; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-gradient { background: linear-gradient(to right, #ffffff, #ff69b4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glow-border:hover { border-color: var(--pink); box-shadow: 0 0 20px rgba(255, 105, 180, 0.2); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; font-weight: 700; }
-        .option-card:hover { background: rgba(255, 105, 180, 0.15); border-color: var(--pink); transform: translateX(10px); }
-        #progress-bar { height: 6px; width: 0%; background: linear-gradient(to right, #ff69b4, #ffffff); transition: 0.4s; }
+        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; }
+        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.1); }
+        #progress-bar { height: 6px; width: 0%; background: var(--pink); transition: 0.4s; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 glass py-4">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <span class="text-2xl font-extrabold tracking-tighter text-pink-500">RG.</span>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
-                <a href="#about" class="hover:text-pink-500 transition">About</a>
-                <a href="#experience" class="hover:text-pink-500 transition">Experience</a>
-                <a href="#quiz" class="hover:text-pink-500 transition">SAT Prep</a>
-                <a href="#contact" class="hover:text-pink-500 transition">Contact</a>
-            </div>
+    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
+        <span class="text-xl font-bold text-pink-500">RIYA GANDHI</span>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold uppercase">
+            <a href="#experience">Experience</a>
+            <a href="#quiz">SAT Mastery</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
             <div class="fade-in">
-                <div class="inline-block px-4 py-1 rounded-full border border-pink-500/30 text-pink-500 text-xs font-bold mb-6 tracking-widest uppercase">Finance & Accounting @ Rutgers</div>
-                <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-6 italic">Mastering <br><span class="text-gradient">Finance.</span></h1>
-                <p class="text-xl text-gray-400 mb-8 max-w-lg leading-relaxed">Incoming Investment Banking Analyst at Mizuho with a foundation in Tax Consulting and Market Analysis.</p>
-                <div class="flex gap-4">
-                    <a href="#quiz" class="bg-pink-600 hover:bg-pink-500 px-8 py-4 rounded-full font-bold transition transform hover:scale-105 shadow-lg">Launch SAT Mastery</a>
-                </div>
+                <h1 class="text-6xl font-extrabold mb-6">Finance <br><span class="text-gradient">Professional</span></h1>
+                <p class="text-gray-400 text-lg mb-8">Bachelor of Science in Finance & Accounting @ Rutgers University. Incoming Summer Analyst at Mizuho.</p>
+                <a href="#quiz" class="bg-pink-600 px-8 py-4 rounded-full font-bold hover:bg-pink-500 transition">Start SAT Quiz</a>
             </div>
-            <div class="relative fade-in flex justify-center">
-                <div class="absolute inset-0 bg-pink-500/10 blur-[120px] rounded-full"></div>
-                <div class="w-80 h-80 md:w-[450px] md:h-[450px] rounded-3xl overflow-hidden border border-white/10 relative z-10 shadow-2xl">
-                    <img src="Riya%20Gandhi%20Headshot.jpg" class="w-full h-full object-cover" alt="Riya Gandhi">
+            <div class="relative flex justify-center fade-in">
+                <div class="w-80 h-80 md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden border-2 border-pink-500/30 shadow-2xl">
+                    <img src="Riya Gandhi Headshot.jpg" 
+                         onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
+                         class="w-full h-full object-cover" 
+                         alt="Riya Gandhi">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-6">
+    <section id="experience" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 fade-in tracking-tight uppercase">Professional Portfolio</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass p-8 rounded-2xl glow-border transition fade-in">
-                    <h3 class="text-2xl font-bold text-pink-500">Mizuho Financial Group</h3>
-                    <p class="text-gray-400 text-sm mb-4">Investment Banking Summer Analyst | $4.2B+ Deal Exposure</p>
-                    <p class="text-sm">Developed comps and DCF models for M&A transactions across banking and energy sectors.</p>
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-pink-500 pl-4">EXPERIENCE</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass p-8 rounded-xl fade-in">
+                    <h3 class="text-xl font-bold text-pink-500">Mizuho Financial Group</h3>
+                    <p class="text-sm text-gray-400 mb-4 font-bold">IB Summer Analyst | 2025</p>
+                    <p class="text-sm">Exposure to $4.2B+ deal value across FIG and LCM rotations.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl glow-border transition fade-in">
-                    <h3 class="text-2xl font-bold text-pink-500">KPMG LLP</h3>
-                    <p class="text-gray-400 text-sm mb-4">Tax Consulting Intern | PE Services</p>
-                    <p class="text-sm">Automated book-to-tax reconciliations and reported taxable income for 18 private equity engagements.</p>
+                <div class="glass p-8 rounded-xl fade-in">
+                    <h3 class="text-xl font-bold text-pink-500">KPMG LLP</h3>
+                    <p class="text-sm text-gray-400 mb-4 font-bold">Tax Consulting Intern | 2025</p>
+                    <p class="text-sm">Reporting for 18 Private Equity engagements using AMP platforms.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="quiz" class="py-32 px-6 bg-zinc-900/40">
+    <section id="quiz" class="py-24 px-6 bg-zinc-900/50">
         <div class="max-w-4xl mx-auto">
-            <div class="flex justify-between items-end mb-12 fade-in">
-                <div>
-                    <h2 class="text-5xl font-black italic tracking-tighter uppercase">SAT <span class="text-pink-500">Mastery</span></h2>
-                    <p class="text-gray-500 mt-2 font-bold uppercase text-xs tracking-widest">Diagnostic Assessment: Level 10</p>
-                </div>
-                <div id="streak-display" class="text-2xl font-bold text-pink-500 text-right">0 🔥</div>
+            <div class="flex justify-between items-end mb-8 fade-in">
+                <h2 class="text-4xl font-black italic">SAT <span class="text-pink-500">QUANT</span></h2>
+                <div id="streak-display" class="text-pink-500 font-bold text-xl">0 🔥</div>
             </div>
-            <div class="glass rounded-3xl overflow-hidden fade-in border-pink-500/20 border-2">
+            <div class="glass rounded-2xl overflow-hidden fade-in border border-white/10">
                 <div id="progress-bar"></div>
-                <div id="quiz-container" class="p-12"></div>
+                <div id="quiz-container" class="p-10 text-center md:text-left"></div>
             </div>
         </div>
     </section>
+
+    <footer id="contact" class="py-20 text-center">
+        <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+        <div class="flex justify-center space-x-8 text-3xl mb-8">
+            <a href="mailto:rng65@scarletmail.rutgers.edu" class="hover:text-pink-500"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/riya-gandhi-" class="hover:text-pink-500"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-xs text-gray-600 tracking-widest">RIYA GANDHI &copy; 2024</p>
+    </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
@@ -94,16 +95,16 @@
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
         const quizItems = [
-            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x - 8 = 3x + 5 -> x = 13." },
-            { q: "A circle has a circumference of 10π. What is its area?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r = 5, so Area = π(5²) = 25π." },
-            { q: "Solve for x: 3x + y = 7 and x - y = 1.", options: ["1", "2", "3", "4"], correct: 1, exp: "Add equations: 4x = 8 -> x = 2." },
-            { q: "What is the slope of a line perpendicular to y = -1/3x + 5?", options: ["-3", "-1/3", "1/3", "3"], correct: 3, exp: "Negative reciprocal of -1/3 is 3." },
-            { q: "If a² + b² = 25 and ab = 12, what is (a+b)²?", options: ["37", "49", "64", "13"], correct: 1, exp: "a² + 2ab + b² = 25 + 24 = 49." },
-            { q: "A prism has L=4, W=3, and Diagonal=13. What is Height?", options: ["5", "12", "10", "8"], correct: 1, exp: "4²+3²+H² = 13² -> 25+H² = 169 -> H=12." },
-            { q: "In a scatterplot, if the line of best fit is y = 2x + 5, what is y when x = 10?", options: ["15", "20", "25", "30"], correct: 2, exp: "y = 2(10) + 5 = 25." },
-            { q: "What is the sum of the solutions to x² - 6x + 8 = 0?", options: ["2", "4", "6", "8"], correct: 2, exp: "Sum of roots = -b/a = -(-6)/1 = 6." },
-            { q: "If 20% of a number is 40, what is 50% of that number?", options: ["80", "100", "200", "400"], correct: 1, exp: "Number is 200. 50% of 200 is 100." },
-            { q: "Simplify: (x³)² / x²", options: ["x³", "x⁴", "x⁵", "x⁶"], correct: 1, exp: "x⁶ / x² = x⁴." }
+            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x-8 = 3x+5 -> x=13" },
+            { q: "Area of a circle with circumference 10π?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r=5, Area=πr²=25π" },
+            { q: "If 3x + y = 7 and x - y = 1, what is x?", options: ["1", "2", "3", "4"], correct: 1, exp: "Add eq: 4x=8 -> x=2" },
+            { q: "Slope perpendicular to y = -1/3x + 5?", options: ["-3", "1/3", "3", "0"], correct: 2, exp: "Neg reciprocal of -1/3 is 3" },
+            { q: "If a² + b² = 25 and ab = 12, what is (a+b)²?", options: ["37", "49", "64", "25"], correct: 1, exp: "a²+b²+2ab = 25+24 = 49" },
+            { q: "Sum of roots for x² - 6x + 8 = 0?", options: ["2", "4", "6", "8"], correct: 2, exp: "-b/a = 6" },
+            { q: "Median of {3, 5, 7, 12, 18}?", options: ["5", "7", "12", "9"], correct: 1, exp: "The middle value is 7" },
+            { q: "If 20% of n = 40, what is 50% of n?", options: ["80", "100", "200", "400"], correct: 1, exp: "n=200, 50% is 100" },
+            { q: "Volume of cube with side 4?", options: ["16", "32", "64", "12"], correct: 2, exp: "4³ = 64" },
+            { q: "Simplify (x³)² / x²", options: ["x³", "x⁴", "x⁵", "x⁶"], correct: 1, exp: "x⁶/x² = x⁴" }
         ];
 
         let idx = 0, score = 0, streak = 0;
@@ -114,20 +115,38 @@
             progress.style.width = `${(idx / quizItems.length) * 100}%`;
             if(idx >= quizItems.length) { showResults(); return; }
             const item = quizItems[idx];
-            container.innerHTML = `<h3 class="text-2xl font-bold mb-8 italic uppercase text-pink-500">Question ${idx+1}:</h3><h3 class="text-2xl font-bold mb-8">${item.q}</h3><div class="grid md:grid-cols-2 gap-4">${item.options.map((opt, i) => `<div class="option-card" onclick="check(${i})">${opt}</div>`).join('')}</div>`;
+            container.innerHTML = `
+                <p class="text-pink-500 font-bold mb-2 uppercase text-xs">Question ${idx+1}</p>
+                <h3 class="text-2xl font-bold mb-8">${item.q}</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    ${item.options.map((opt, i) => `<div class="option-card" onclick="check(${i})">${opt}</div>`).join('')}
+                </div>
+            `;
         }
 
-        function check(selected) {
+        function check(s) {
             const item = quizItems[idx];
-            const correct = selected === item.correct;
+            const correct = s === item.correct;
             if(correct) { score++; streak++; } else { streak = 0; }
             document.getElementById('streak-display').innerText = `${streak} 🔥`;
-            document.getElementById('quiz-container').innerHTML = `<div class="text-center py-8"><h4 class="text-4xl font-black mb-4">${correct ? 'CORRECT ✨' : 'INCORRECT ❌'}</h4><p class="text-gray-400 mb-8 glass p-6 rounded-xl italic">Logic: "${item.exp}"</p><button onclick="idx++; startQuiz();" class="bg-pink-600 text-white px-12 py-3 rounded-full font-black uppercase">Next Entry</button></div>`;
+            document.getElementById('quiz-container').innerHTML = `
+                <div class="text-center py-4">
+                    <h4 class="text-3xl font-bold mb-4">${correct ? 'CORRECT' : 'WRONG'}</h4>
+                    <p class="text-gray-400 mb-8 italic">Logic: ${item.exp}</p>
+                    <button onclick="idx++; startQuiz();" class="bg-white text-black px-10 py-3 rounded-full font-bold">NEXT</button>
+                </div>
+            `;
         }
 
         function showResults() {
             const pct = Math.round((score/quizItems.length)*100);
-            document.getElementById('quiz-container').innerHTML = `<div class="text-center"><h2 class="text-5xl font-black mb-4 italic text-pink-500">${pct >= 80 ? 'IVY LEAGUE MATERIAL' : 'KEEP GRINDING'}</h2><div class="text-white text-8xl font-black mb-6">${pct}%</div><p class="mb-12 text-gray-500 uppercase tracking-widest">Diagnostic Level: Comprehensive</p><button onclick="location.reload()" class="bg-white text-black px-12 py-4 rounded-full font-bold uppercase tracking-tighter">Restart Assessment</button></div>`;
+            document.getElementById('quiz-container').innerHTML = `
+                <div class="text-center py-10">
+                    <h2 class="text-5xl font-black mb-4 text-pink-500">${pct}%</h2>
+                    <p class="mb-10 text-gray-400 uppercase tracking-widest">${pct > 80 ? 'Ivy League Ready' : 'Solid Performance'}</p>
+                    <button onclick="location.reload()" class="bg-pink-600 px-10 py-4 rounded-full font-bold">RESTART</button>
+                </div>
+            `;
         }
         startQuiz();
     </script>
