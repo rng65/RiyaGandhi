@@ -6,78 +6,155 @@
     <title>Riya Gandhi | Finance & Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap');
         :root { --pink: #ff69b4; --dark: #0a0a0a; }
-        body { background-color: var(--dark); color: #f5f5f5; font-family: 'Arimo', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
-        h1, h2, h3, .nav-font { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background-color: var(--dark); color: #f5f5f5; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-pink { color: var(--pink); }
         .bg-pink { background-color: var(--pink); }
-        
-        /* App UI (Screenshot Replication) */
-        .option-card { transition: 0.2s; cursor: pointer; border: 1px solid #333; background: rgba(255,255,255,0.02); }
+        .option-card { cursor: pointer; border: 1px solid #333; transition: 0.2s; background: rgba(255,255,255,0.02); margin-bottom: 12px; border-radius: 12px; padding: 20px; font-weight: 600; }
         .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.05); }
-        .correct-card { background: #dcfce7 !important; border-color: #22c55e !important; color: #166534 !important; }
-        .incorrect-card { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important; }
-        
-        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        
-        .skill-tag { background: rgba(255, 105, 180, 0.1); border: 1px solid rgba(255, 105, 180, 0.3); color: var(--pink); padding: 4px 12px; border-radius: 99px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 glass py-4 px-10 flex justify-between items-center">
-        <span class="nav-font text-xl font-extrabold tracking-tighter text-pink">RIYA GANDHI</span>
-        <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-            <a href="#about" class="hover:text-pink transition">Profile</a>
-            <a href="#education" class="hover:text-pink transition">Education</a>
-            <a href="#experience" class="hover:text-pink transition">Experience</a>
-            <a href="#sie-app" class="hover:text-pink transition">SIE App</a>
-            <a href="#contact" class="hover:text-pink transition">Contact</a>
+        <span class="text-xl font-extrabold tracking-tighter text-pink">RIYA GANDHI</span>
+        <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-pink">About</a>
+            <a href="#education" class="hover:text-pink">Education</a>
+            <a href="#experience" class="hover:text-pink">Experience</a>
+            <a href="#sie-app" class="hover:text-pink">SIE App</a>
         </div>
     </nav>
 
     <section id="about" class="min-h-screen flex items-center justify-center px-10 pt-20">
-        <div class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in">
-                <h1 class="text-7xl font-extrabold mb-6 leading-tight italic">Market <br><span class="text-pink">Strategist.</span></h1>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-md">Incoming IB Summer Analyst at Mizuho. Specializing in FIG and Loan Capital Markets with a track record of analytical excellence at KPMG.</p>
-                <div class="flex flex-wrap gap-2 mb-10">
-                    <span class="skill-tag">Bloomberg BMC</span>
-                    <span class="skill-tag">QuickBooks Pro</span>
-                    <span class="skill-tag">Valuation</span>
-                    <span class="skill-tag">Python</span>
-                </div>
-                <a href="#sie-app" class="bg-pink text-black px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition shadow-lg shadow-pink/20">Launch SIE Diagnostic</a>
+        <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
+            <div class="z-10">
+                <h1 class="text-7xl font-extrabold mb-6 italic leading-none">Market <br><span class="text-pink">Strategist.</span></h1>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-md">Incoming IB Summer Analyst @ Mizuho. Specializing in FIG & Loan Capital Markets with experience at KPMG.</p>
+                <a href="#sie-app" class="bg-pink text-black px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest inline-block hover:scale-105 transition">Launch SIE App</a>
             </div>
-            <div class="relative flex justify-center fade-in">
-                <div class="absolute inset-0 bg-pink/5 blur-[100px] rounded-full"></div>
-                <div class="w-80 h-80 md:w-[450px] md:h-[450px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative z-10">
-                    <img src="Assets/Riya Gandhi Headshot.jpg" 
-                         onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
-                         class="w-full h-full object-cover" alt="Riya Gandhi">
+            <div class="flex justify-center relative">
+                <img src="Assets/Riya Gandhi Headshot.png" 
+                     onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
+                     class="w-full max-w-sm rounded-3xl border border-white/10 shadow-2xl z-10">
+                <div class="absolute inset-0 bg-pink/10 blur-[100px] rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 px-10 bg-zinc-900/20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="glass p-10 rounded-3xl">
+                <h2 class="text-pink font-bold uppercase tracking-widest text-xs mb-4">Education</h2>
+                <h3 class="text-3xl font-extrabold mb-2">Rutgers University</h3>
+                <p class="text-gray-400 font-semibold mb-4 text-lg">Finance & Accounting • Class of 2026</p>
+                <div class="text-sm text-gray-500 space-y-1">
+                    <p>• Cumulative GPA: 3.7 / 4.0</p>
+                    <p>• Beta Alpha Psi Honor Society</p>
+                    <p>• Dean's List (All Semesters)</p>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-3xl">
+                <h2 class="text-pink font-bold uppercase tracking-widest text-xs mb-4">Current Role</h2>
+                <h3 class="text-3xl font-extrabold mb-2">Mizuho Financial</h3>
+                <p class="text-gray-400 font-semibold mb-4 text-lg">IB Summer Analyst | NYC</p>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Valuation analysis for FIG and LCM transactions totaling $4.2B+.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sie-app" class="py-24 px-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-4xl font-black italic uppercase">SIE <span class="text-pink">Prep</span></h2>
+                <div class="text-right flex gap-6">
+                    <div><p class="text-[10px] font-bold text-gray-500 uppercase">Score</p><p id="score" class="text-2xl font-bold">0</p></div>
+                    <div><p class="text-[10px] font-bold text-gray-500 uppercase">Streak</p><p class="text-2xl font-bold text-pink"><span id="streak">0</span> 🔥</p></div>
+                </div>
+            </div>
+            <div class="glass rounded-[2rem] overflow-hidden p-8 md:p-16 relative" style="min-height: 400px;">
+                <div id="quiz-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-10 bg-zinc-900/10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl font-black mb-8 italic uppercase border-l-4 border-pink pl-6">Leadership</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-chalkboard-user text-pink text-xl"></i>
+                        <p class="text-gray-400"><strong class="text-white">Seminar Instructor:</strong> Mentoring 25 students on professional growth at Rutgers.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-pen-nib text-pink text-xl"></i>
+                        <p class="text-gray-400"><strong class="text-white">LIBOR Columnist:</strong> Weekly market insights for 2,000+ readers.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-black mb-8 italic uppercase border-l-4 border-pink pl-6">Interests</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-4 rounded-xl text-center text-xs font-bold uppercase tracking-widest hover:border-pink/50 transition cursor-default">Skydiving</div>
+                    <div class="glass p-4 rounded-xl text-center text-xs font-bold uppercase tracking-widest hover:border-pink/50 transition cursor-default">Bhangra</div>
+                    <div class="glass p-4 rounded-xl text-center text-xs font-bold uppercase tracking-widest hover:border-pink/50 transition cursor-default">Scuba</div>
+                    <div class="glass p-4 rounded-xl text-center text-xs font-bold uppercase tracking-widest hover:border-pink/50 transition cursor-default">Ice Cream</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="py-32 px-10 bg-zinc-900/10">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 italic uppercase border-l-4 border-pink pl-6">Education</h2>
-            <div class="glass p-10 rounded-[2rem] flex flex-col md:flex-row justify-between items-start fade-in">
-                <div>
-                    <h3 class="text-3xl font-bold text-pink mb-2">Rutgers Business School</h3>
-                    <p class="text-xl font-semibold mb-4 text-gray-200">B.S. in Finance and Accounting</p>
-                    <p class="text-gray-400 mb-6 italic">Class of 2026 • New Brunswick, NJ</p>
-                    <div class="grid grid-cols-2 gap-4 text-sm">
-                        <div class="text-gray-500 font-bold uppercase tracking-tighter">GPA: 3.7 / 4.0</div>
-                        <div class="text-gray-500 font-bold uppercase tracking-tighter">Beta Alpha Psi</div>
-                    </div>
+    <footer class="py-20 text-center">
+        <div class="flex justify-center space-x-10 text-3xl mb-10 text-gray-500">
+            <a href="mailto:rng65@scarletmail.rutgers.edu" class="hover:text-pink"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/riya-gandhi-" target="_blank" class="hover:text-pink"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.5em]">Riya Gandhi &bull; 2024</p>
+    </footer>
+
+    <script>
+        const sieQ = [
+            { q: "Which Treasury security is always issued at a discount?", options: ["T-Bills", "T-Notes", "T-Bonds", "TIPS"], correct: 0, exp: "T-bills are sold at a discount and do not pay traditional interest." },
+            { q: "The maximum gain on a long call option is:", options: ["Premium paid", "Strike price", "Unlimited", "Zero"], correct: 2, exp: "Long calls have unlimited potential as stock prices can rise infinitely." },
+            { q: "Which body oversees securities markets in the US?", options: ["SEC", "FINRA", "SIPC", "FDIC"], correct: 0, exp: "The SEC is the primary federal regulator of US markets." }
+        ];
+
+        let idx = 0, scoreNum = 0, streakNum = 0;
+
+        function render() {
+            const box = document.getElementById('quiz-box');
+            if(idx >= sieQ.length) {
+                box.innerHTML = `<div class="text-center py-10"><h3 class="text-6xl font-black text-pink mb-4">${Math.round((scoreNum/sieQ.length)*100)}%</h3><p class="text-gray-400 font-bold uppercase tracking-widest">Complete</p><button onclick="location.reload()" class="mt-8 bg-pink text-black px-10 py-3 rounded-full font-bold uppercase text-xs">Restart</button></div>`;
+                return;
+            }
+            const q = sieQ[idx];
+            box.innerHTML = `
+                <p class="text-[10px] font-bold uppercase text-gray-500 mb-6">Question ${idx+1}/${sieQ.length}</p>
+                <h3 class="text-2xl font-bold mb-10 leading-tight">${q.q}</h3>
+                <div id="options-container">${q.options.map((o, i) => `<div class="option-card" onclick="check(${i})">${o}</div>`).join('')}</div>
+            `;
+        }
+
+        function check(s) {
+            const q = sieQ[idx];
+            const correct = s === q.correct;
+            if(correct) { scoreNum += 100; streakNum++; } else { streakNum = 0; }
+            document.getElementById('score').innerText = scoreNum;
+            document.getElementById('streak').innerText = streakNum;
+            
+            document.getElementById('quiz-box').innerHTML = `
+                <div class="bg-white p-10 rounded-3xl text-black">
+                    <h4 class="text-2xl font-black uppercase italic mb-2" style="color:${correct ? '#22c55e' : '#ef4444'}">${correct ? 'Sharp!' : 'Incorrect'}</h4>
+                    <p class="text-gray-600 mb-8 font-medium">${q.exp}</p>
+                    <button onclick="idx++; render();" class="w-full bg-black text-white py-4 rounded-xl font-bold uppercase tracking-widest">Next Question</button>
                 </div>
-                <div class="mt-8 md:mt-0 md:text-right">
-                    <h4 class="text-xs font-bold text-pink uppercase mb-4 tracking-widest">Honors</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>Dean's List (All Semesters)</li>
+            `;
+        }
+        render();
+    </script>
+</body>
+</html>
