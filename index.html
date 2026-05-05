@@ -3,84 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Gandhi | Finance & Strategy</title>
+    <title>Riya Gandhi | Finance Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --pink: #ff69b4; --dark: #0a0a0a; }
-        body { background-color: var(--dark); color: #f5f5f5; font-family: 'Arimo', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, .nav-font { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background-color: var(--dark); color: #f5f5f5; font-family: sans-serif; scroll-behavior: smooth; margin: 0; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-pink { color: var(--pink); }
         .bg-pink { background-color: var(--pink); }
-        .border-pink { border-color: var(--pink); }
-        .glow-pink:hover { box-shadow: 0 0 20px rgba(255, 105, 180, 0.4); }
-        
-        /* App UI Classes */
-        .option-card { transition: 0.2s; cursor: pointer; border: 1px solid #333; }
-        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.05); }
-        .correct-card { background: #dcfce7 !important; border-color: #22c55e !important; color: #166534 !important; }
-        .incorrect-card { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important; }
-        
-        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .option-card { cursor: pointer; border: 1px solid #333; transition: 0.2s; }
+        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.1); }
+        .feedback-card { display: none; background: white; color: black; border-radius: 1.5rem; padding: 2rem; margin-top: 2rem; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 glass py-5 px-10 flex justify-between items-center">
-        <span class="nav-font text-xl font-extrabold tracking-tighter text-pink">RIYA GANDHI</span>
-        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em]">
-            <a href="#about" class="hover:text-pink transition">Profile</a>
-            <a href="#experience" class="hover:text-pink transition">Career</a>
-            <a href="#leadership" class="hover:text-pink transition">Impact</a>
-            <a href="#sie-app" class="hover:text-pink transition">SIE Prep</a>
-            <a href="#contact" class="hover:text-pink transition">Contact</a>
+    <nav class="fixed w-full z-50 glass py-4 px-8 flex justify-between items-center">
+        <span class="font-bold text-xl text-pink">RIYA GANDHI</span>
+        <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-pink">About</a>
+            <a href="#experience" class="hover:text-pink">Experience</a>
+            <a href="#sie-app" class="hover:text-pink">SIE App</a>
         </div>
     </nav>
 
-    <section id="about" class="min-h-screen flex items-center justify-center px-10 pt-20">
-        <div class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in">
-                <div class="inline-block px-4 py-1 rounded-full border border-pink/30 text-pink text-[10px] font-bold mb-6 uppercase tracking-widest">
-                    Finance & Strategy Portfolio
-                </div>
-                <h1 class="text-8xl font-extrabold mb-6 leading-[0.9] tracking-tighter italic">Institutional <br><span class="text-pink">Mindset.</span></h1>
-                <p class="text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
-                    Incoming IB Summer Analyst at Mizuho. Combining deep analytical rigor from KPMG and Rutgers with a passion for high-stakes problem solving.
-                </p>
-                <div class="flex gap-6">
-                    <a href="#sie-app" class="bg-pink px-10 py-4 rounded-full font-bold glow-pink transition text-black uppercase text-xs tracking-widest">Launch SIE Diagnostic</a>
-                </div>
+    <section id="about" class="min-h-screen flex items-center justify-center px-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-7xl font-extrabold mb-4 italic">Strategic <br><span class="text-pink">Finance.</span></h1>
+                <p class="text-gray-400 text-lg mb-8">Incoming IB Summer Analyst @ Mizuho. Specialized in FIG and LCM valuation.</p>
+                <a href="#sie-app" class="bg-pink text-black px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest">Start SIE Diagnostic</a>
             </div>
-            <div class="relative flex justify-center fade-in">
-                <div class="absolute inset-0 bg-pink/5 blur-[120px] rounded-full"></div>
-                <div class="w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative z-10 group">
-                    <img src="Assets/Riya Gandhi Headshot.jpg" 
-                         onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000" 
-                         alt="Riya Gandhi">
+            <div class="flex justify-center">
+                <img src="Assets/Riya Gandhi Headshot.jpg" 
+                     onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
+                     class="w-80 h-80 object-cover rounded-3xl border border-white/10 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 bg-zinc-900/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 italic uppercase">Professional History</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink font-bold text-xl">Mizuho Financial Group</h3>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">IB Summer Analyst | NYC</p>
+                    <p class="text-sm text-gray-400 italic">Rotated through FIG and LCM. Valuation analysis for $4.2B+ in transactions.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink font-bold text-xl">KPMG LLP</h3>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">Tax Consulting Intern | NYC</p>
+                    <p class="text-sm text-gray-400 italic">Managed K-1 reporting for 18 Private Equity engagements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-10">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-20 italic uppercase tracking-tighter border-l-4 border-pink pl-6">Professional Record</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-10 rounded-3xl fade-in">
-                    <p class="text-pink font-bold text-xs mb-4 tracking-widest uppercase">Education</p>
-                    <h3 class="text-2xl font-bold mb-2">Rutgers University</h3>
-                    <p class="text-gray-500 text-sm mb-6 uppercase">Finance & Accounting • GPA: 3.7</p>
-                    <p class="text-gray-400 text-sm italic leading-relaxed">Dean's List. Beta Alpha Psi. Focus on Investment Banking and Advanced Corporate Finance.</p>
+    <section id="sie-app" class="py-24 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-3xl font-bold italic uppercase">SIE <span class="text-pink">Diagnostic</span></h2>
+                <div class="text-right">
+                    <p class="text-[10px] text-gray-500 font-bold uppercase">Streak</p>
+                    <p class="text-xl font-bold text-pink"><span id="streak">0</span> 🔥</p>
                 </div>
+            </div>
+            <div class="glass p-8 md:p-12 rounded-[2rem]">
+                <div id="quiz-content">
+                    </div>
+                <div id="feedback" class="feedback-card">
+                    <h4 id="fb-title" class="text-2xl font-bold mb-2 uppercase">Correct</h4>
+                    <p id="fb-text" class="text-gray-600 mb-6"></p>
+                    <button onclick="nextQ()" class="w-full bg-black text-white py-4 rounded-xl font-bold uppercase">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="glass p-10 rounded-3xl fade-in">
-                    <p class="text-pink font-bold text-xs mb-4 tracking-widest uppercase">Current</p>
-                    <h3 class="text-2xl font-bold mb-2">Mizuho Financial</h3>
-                    <p class="text-gray-500 text-sm mb-6 uppercase">IB Summer Analyst | NYC</p>
-                    <ul class="text-gray-400 text-xs space-y-3 list-disc pl-4">
-                        <li>Supported $4.2B in transactions across FIG and
+    <footer class="py-10 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+        Riya Gandhi • Portfolio 2024
+    </footer>
+
+    <script>
+        const questions = [
+            { q: "Which of the following is issued at a discount?", options: ["Treasury Bills", "Corporate Bonds", "Preferred Stock", "Mutual Funds"], correct: 0, exp: "T-bills are always issued at a discount and do not pay traditional interest." },
+            { q: "The maximum gain on a long call option is:", options: ["Premium paid", "Strike price", "Unlimited", "Zero"], correct: 2, exp: "A long call has unlimited profit potential as the stock price can rise infinitely." },
+            { q: "Which body oversees the US securities markets?", options: ["FINRA", "SEC", "SIPC", "FDIC"], correct: 1, exp: "The Securities and Exchange Commission (SEC) is the primary federal regulator." },
+            { q: "Front-end loads are associated with which shares?", options: ["Class A", "Class B", "Class C", "Class D"], correct: 0, exp: "Class A shares typically feature a front-end sales charge." }
+        ];
+
+        let idx = 0, score = 0, streak = 0;
+
+        function loadQ() {
+            if(idx >= questions.length) {
+                document.getElementById('quiz-content').innerHTML = `<div class="text-center"><h2 class="text-5xl font-bold text-pink">${score * 25}%</h2><p class="mt-4 text-gray-400">Diagnostic Complete</p><button onclick="location.reload()" class="mt-8 bg-pink text-black px-10 py-3 rounded-full font-bold">Restart</button></div>`;
+                return;
+            }
+            const q = questions[idx];
+            document.getElementById('feedback').style
