@@ -3,127 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Gandhi | Finance Portfolio</title>
+    <title>Riya Gandhi | Finance & Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --pink: #ff69b4; --dark: #050505; }
-        body { background-color: var(--dark); color: white; font-family: sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #ffffff, #ff69b4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .option-card { cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; transition: 0.3s; }
-        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.1); }
-        .badge { background: rgba(255, 105, 180, 0.2); color: #ff69b4; padding: 4px 12px; border-radius: 99px; font-size: 12px; font-weight: bold; }
+        :root { --pink: #ff69b4; --dark: #0a0a0a; }
+        body { background-color: var(--dark); color: #f5f5f5; font-family: 'Arimo', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .nav-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-pink { color: var(--pink); }
+        .bg-pink { background-color: var(--pink); }
+        .border-pink { border-color: var(--pink); }
+        .glow-pink:hover { box-shadow: 0 0 20px rgba(255, 105, 180, 0.4); }
+        
+        /* App UI Classes */
+        .option-card { transition: 0.2s; cursor: pointer; border: 1px solid #333; }
+        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.05); }
+        .correct-card { background: #dcfce7 !important; border-color: #22c55e !important; color: #166534 !important; }
+        .incorrect-card { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important; }
+        
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
-        <span class="text-xl font-bold text-pink-500">RIYA GANDHI</span>
-        <div class="space-x-4 text-xs font-bold uppercase tracking-widest">
-            <a href="#about" class="hover:text-pink-500">About</a>
-            <a href="#experience" class="hover:text-pink-500">Experience</a>
-            <a href="#quiz" class="hover:text-pink-500">SAT App</a>
+    <nav class="fixed w-full z-50 glass py-5 px-10 flex justify-between items-center">
+        <span class="nav-font text-xl font-extrabold tracking-tighter text-pink">RIYA GANDHI</span>
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="#about" class="hover:text-pink transition">Profile</a>
+            <a href="#experience" class="hover:text-pink transition">Career</a>
+            <a href="#leadership" class="hover:text-pink transition">Impact</a>
+            <a href="#sie-app" class="hover:text-pink transition">SIE Prep</a>
+            <a href="#contact" class="hover:text-pink transition">Contact</a>
         </div>
     </nav>
 
-    <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
-        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-6xl font-extrabold mb-6 italic">Market <span class="text-gradient">Analyst.</span></h1>
-                <p class="text-gray-400 text-lg mb-8">Incoming IB Summer Analyst @ Mizuho. Specializing in FIG & LCM valuation with a background in Tax Consulting at KPMG.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="badge">QuickBooks</span> <span class="badge">Bloomberg BMC</span> <span class="badge">Python</span>
+    <section id="about" class="min-h-screen flex items-center justify-center px-10 pt-20">
+        <div class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <div class="inline-block px-4 py-1 rounded-full border border-pink/30 text-pink text-[10px] font-bold mb-6 uppercase tracking-widest">
+                    Finance & Strategy Portfolio
                 </div>
-                <a href="#quiz" class="bg-pink-600 px-8 py-4 rounded-full font-bold hover:bg-pink-400 transition">Take the SAT Quiz</a>
+                <h1 class="text-8xl font-extrabold mb-6 leading-[0.9] tracking-tighter italic">Institutional <br><span class="text-pink">Mindset.</span></h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-lg leading-relaxed">
+                    Incoming IB Summer Analyst at Mizuho. Combining deep analytical rigor from KPMG and Rutgers with a passion for high-stakes problem solving.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#sie-app" class="bg-pink px-10 py-4 rounded-full font-bold glow-pink transition text-black uppercase text-xs tracking-widest">Launch SIE Diagnostic</a>
+                </div>
             </div>
-            <div class="flex justify-center">
-                <div class="w-80 h-80 md:w-[400px] md:h-[400px] rounded-3xl overflow-hidden border border-pink-500/20 shadow-2xl">
-                    <img src="Assets/Riya Gandhi Headshot.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'" class="w-full h-full object-cover" alt="Riya Gandhi">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-20 px-6 bg-zinc-900/30">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 italic border-l-4 border-pink-500 pl-4 uppercase">Career & Leadership</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-pink-500 font-bold text-xl">Mizuho Financial Group</h3>
-                    <p class="text-xs text-gray-500 mb-4">IB Summer Analyst | NYC</p>
-                    <p class="text-sm text-gray-400">Valuation analysis for $4.2B+ in transactions across FIG and LCM rotations.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-pink-500 font-bold text-xl">KPMG LLP</h3>
-                    <p class="text-xs text-gray-500 mb-4">Tax Consulting Intern | NYC</p>
-                    <p class="text-sm text-gray-400">Reporting for 18 Private Equity engagements and automated book-to-tax reconciliations.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-pink-500 font-bold text-xl">Rutgers LIBOR</h3>
-                    <p class="text-xs text-gray-500 mb-4">Financial Columnist</p>
-                    <p class="text-sm text-gray-400">Publishing market insights to a community of 2,000+ business students.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-pink-500 font-bold text-xl">Personal Interests</h3>
-                    <p class="text-xs text-gray-500 mb-4">Beyond Finance</p>
-                    <p class="text-sm text-gray-400">Skydiving, Scuba Diving, Bhangra Dance, and Artisan Ice Cream Enthusiast.</p>
+            <div class="relative flex justify-center fade-in">
+                <div class="absolute inset-0 bg-pink/5 blur-[120px] rounded-full"></div>
+                <div class="w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative z-10 group">
+                    <img src="Assets/Riya Gandhi Headshot.jpg" 
+                         onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000" 
+                         alt="Riya Gandhi">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="quiz" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 italic uppercase text-center">SAT <span class="text-pink-500">Diagnostic</span></h2>
-            <div class="glass rounded-3xl p-8 md:p-12 border border-white/10">
-                <div id="quiz-container">
-                    </div>
-            </div>
-        </div>
-    </section>
+    <section id="experience" class="py-32 px-10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-20 italic uppercase tracking-tighter border-l-4 border-pink pl-6">Professional Record</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-3xl fade-in">
+                    <p class="text-pink font-bold text-xs mb-4 tracking-widest uppercase">Education</p>
+                    <h3 class="text-2xl font-bold mb-2">Rutgers University</h3>
+                    <p class="text-gray-500 text-sm mb-6 uppercase">Finance & Accounting • GPA: 3.7</p>
+                    <p class="text-gray-400 text-sm italic leading-relaxed">Dean's List. Beta Alpha Psi. Focus on Investment Banking and Advanced Corporate Finance.</p>
+                </div>
 
-    <footer class="py-10 text-center text-gray-600 text-[10px] tracking-widest uppercase">
-        Riya Gandhi &copy; 2024 | Finance Portfolio
-    </footer>
-
-    <script>
-        const quizItems = [
-            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x-8 = 3x+5 -> x=13" },
-            { q: "Circle circumference 10π. Area?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r=5, Area=25π" },
-            { q: "Solve: 3x+y=7 and x-y=1.", options: ["1", "2", "3", "4"], correct: 1, exp: "4x=8 -> x=2" },
-            { q: "Slope perp to y = -1/2x + 10?", options: ["-2", "1/2", "2", "-1/2"], correct: 2, exp: "Reciprocal is 2" },
-            { q: "If a²+b²=25 and ab=12, (a+b)²?", options: ["37", "49", "64", "13"], correct: 1, exp: "25+24=49" },
-            { q: "Prism 3, 4, 12. Diagonal?", options: ["10", "13", "15", "17"], correct: 1, exp: "√(3²+4²+12²)=13" },
-            { q: "Sum of roots x²-10x+24=0?", options: ["6", "4", "10", "24"], correct: 2, exp: "-b/a=10" },
-            { q: "f(x)=x²-3, what is f(x+1)?", options: ["x²-2", "x²+2x-2", "x²+2x+1", "x²-4"], correct: 1, exp: "x²+2x-2" },
-            { q: "Prob of NOT picking red from 50 (10 red)?", options: ["1/5", "2/5", "3/5", "4/5"], correct: 3, exp: "40/50=4/5" },
-            { q: "Simplify (x⁴)³ / x²", options: ["x⁵", "x⁷", "x¹⁰", "x¹²"], correct: 2, exp: "x¹²/x²=x¹⁰" },
-            { q: "sin(A)=3/5. Cos(A)?", options: ["3/4", "4/5", "1", "5/3"], correct: 1, exp: "4/5" },
-            { q: "Median of {2, 10, 3, 8, 5}?", options: ["3", "5", "8", "5.6"], correct: 1, exp: "Middle is 5" },
-            { q: "h(x)=x², g(x)=2x+1. h(g(2))?", options: ["25", "9", "5", "17"], correct: 0, exp: "g(2)=5, h(5)=25" },
-            { q: "Interior angles of pentagon?", options: ["360°", "540°", "720°", "180°"], correct: 1, exp: "540" },
-            { q: "If 3^x = 81, what is x?", options: ["3", "4", "5", "9"], correct: 1, exp: "3^4=81" }
-        ];
-
-        let idx = 0, score = 0;
-
-        function load() {
-            const c = document.getElementById('quiz-container');
-            if(idx >= quizItems.length) {
-                const pct = Math.round((score/quizItems.length)*100);
-                c.innerHTML = `<div class="text-center"><h2 class="text-5xl font-bold text-pink-500 mb-4">${pct}%</h2><p class="text-gray-400 mb-8 uppercase font-bold tracking-widest">${pct >= 80 ? 'Ivy League Ready' : 'Elite Analyst'}</p><button onclick="location.reload()" class="bg-pink-600 px-10 py-3 rounded-full font-bold">Restart</button></div>`;
-                return;
-            }
-            const item = quizItems[idx];
-            c.innerHTML = `<p class="text-pink-500 font-bold mb-2 uppercase text-xs">Question ${idx+1}/15</p><h3 class="text-xl font-bold mb-8">${item.q}</h3><div class="grid md:grid-cols-2 gap-4">${item.options.map((o, i) => `<div class="option-card" onclick="check(${i})">${o}</div>`).join('')}</div>`;
-        }
-
-        function check(s) {
-            if(s === quizItems[idx].correct) score++;
-            document.getElementById('quiz-container').innerHTML = `<div class="text-center py-4"><h4 class="text-2xl font-bold mb-4 uppercase italic">Next Step</h4><p class="text-gray-500 mb-8 italic">Logic: ${quizItems[idx].exp}</p><button onclick="idx++; load();" class="bg-white text-black px-10 py-2 rounded-full font-bold">Continue</button></div>`;
-        }
-        load();
-    </script>
-</body>
-</html>
+                <div class="glass p-10 rounded-3xl fade-in">
+                    <p class="text-pink font-bold text-xs mb-4 tracking-widest uppercase">Current</p>
+                    <h3 class="text-2xl font-bold mb-2">Mizuho Financial</h3>
+                    <p class="text-gray-500 text-sm mb-6 uppercase">IB Summer Analyst | NYC</p>
+                    <ul class="text-gray-400 text-xs space-y-3 list-disc pl-4">
+                        <li>Supported $4.2B in transactions across FIG and
