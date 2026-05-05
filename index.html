@@ -14,15 +14,15 @@
         .text-gradient { background: linear-gradient(to right, #ffffff, #ff69b4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; font-weight: 600; }
-        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.1); transform: scale(1.02); }
-        #progress-bar { height: 6px; width: 0%; background: var(--pink); transition: 0.4s; box-shadow: 0 0 10px var(--pink); }
+        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 1.25rem; border-radius: 1rem; font-weight: 700; }
+        .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.15); transform: scale(1.02); }
+        #progress-bar { height: 6px; width: 0%; background: var(--pink); transition: 0.4s; box-shadow: 0 0 15px var(--pink); }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
-        <span class="text-xl font-bold text-pink-500 tracking-tighter uppercase italic">R. Gandhi</span>
+        <span class="text-xl font-bold text-pink-500 tracking-tighter uppercase italic">R. GANDHI</span>
         <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-[0.2em]">
             <a href="#experience" class="hover:text-pink-500 transition">Experience</a>
             <a href="#quiz" class="hover:text-pink-500 transition">SAT mastery</a>
@@ -33,11 +33,11 @@
     <section class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
             <div class="fade-in">
-                <div class="inline-block px-3 py-1 rounded-full border border-pink-500/30 text-pink-500 text-[10px] font-bold mb-6 tracking-widest uppercase">Class of 2026 • Finance & Accounting</div>
-                <h1 class="text-7xl font-extrabold mb-6 leading-tight italic">Elite <br><span class="text-gradient">Portfolio.</span></h1>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-md">Incoming IB Summer Analyst at Mizuho. Expert in valuation and market analysis with a background in Tax Consulting.</p>
+                <div class="inline-block px-3 py-1 rounded-full border border-pink-500/30 text-pink-500 text-[10px] font-bold mb-6 tracking-widest uppercase">Class of 2026 • Rutgers University</div>
+                <h1 class="text-7xl font-extrabold mb-6 leading-tight italic">Market <br><span class="text-gradient">Strategist.</span></h1>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-md">Incoming IB Summer Analyst at Mizuho. Expert in valuation and market analysis with experience at KPMG and Broadridge.</p>
                 <div class="flex gap-4">
-                    <a href="#quiz" class="bg-pink-600 px-10 py-4 rounded-full font-bold hover:bg-pink-500 transition shadow-lg shadow-pink-500/20">Launch Diagnostic</a>
+                    <a href="#quiz" class="bg-pink-600 px-10 py-4 rounded-full font-bold hover:bg-pink-500 transition shadow-lg shadow-pink-500/20">Start 15-Question Quiz</a>
                 </div>
             </div>
             <div class="relative flex justify-center fade-in">
@@ -45,7 +45,7 @@
                 <div class="w-80 h-80 md:w-[420px] md:h-[420px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative z-10">
                     <img src="Assets/Riya Gandhi Headshot.jpg" 
                          onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'"
-                         class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" 
+                         class="w-full h-full object-cover" 
                          alt="Riya Gandhi">
                 </div>
             </div>
@@ -56,8 +56,8 @@
         <div class="max-w-4xl mx-auto">
             <div class="flex justify-between items-end mb-8 fade-in">
                 <div>
-                    <h2 class="text-4xl font-black italic uppercase">SAT <span class="text-pink-500">QUANT Mastery</span></h2>
-                    <p class="text-gray-500 text-[10px] font-bold mt-2 uppercase tracking-widest">Diagnostic Level: Professional (15 Questions)</p>
+                    <h2 class="text-4xl font-black italic uppercase text-pink-500">SAT Diagnostic</h2>
+                    <p class="text-gray-500 text-[10px] font-bold mt-2 uppercase tracking-widest">Level: Advanced Quantitative</p>
                 </div>
                 <div id="streak-display" class="text-pink-500 font-bold text-2xl">0 🔥</div>
             </div>
@@ -70,17 +70,17 @@
 
     <section id="experience" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 text-center uppercase tracking-widest italic border-b border-white/10 pb-4">Professional Record</h2>
+            <h2 class="text-3xl font-bold mb-16 text-center uppercase tracking-widest italic border-b border-white/10 pb-4">Career Journey</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="glass p-8 rounded-2xl glow-border transition fade-in">
-                    <h3 class="text-pink-500 font-bold text-xl">Mizuho Financial Group</h3>
-                    <p class="text-xs uppercase mb-4 text-gray-500 italic">IB Summer Analyst (2025)</p>
-                    <p class="text-sm text-gray-400">Supported $4.2B+ in transactions across FIG and LCM rotations. Expert in DCF and Comps.</p>
+                    <h3 class="text-pink-500 font-bold text-xl uppercase">Mizuho Financial</h3>
+                    <p class="text-[10px] uppercase mb-4 text-gray-500 font-bold">IB Analyst | 2025</p>
+                    <p class="text-sm text-gray-400">Rotated FIG and LCM. Valuation analysis for $4.2B+ in transactions.</p>
                 </div>
                 <div class="glass p-8 rounded-2xl glow-border transition fade-in">
-                    <h3 class="text-pink-500 font-bold text-xl">KPMG LLP</h3>
-                    <p class="text-xs uppercase mb-4 text-gray-500 italic">Tax Consulting Intern (2025)</p>
-                    <p class="text-sm text-gray-400">Automated workpapers for 18 Private Equity engagements using high-level asset platforms.</p>
+                    <h3 class="text-pink-500 font-bold text-xl uppercase">KPMG LLP</h3>
+                    <p class="text-[10px] uppercase mb-4 text-gray-500 font-bold">Tax Consulting | 2025</p>
+                    <p class="text-sm text-gray-400">Managed 18 PE engagements and automated reconciliation workpapers.</p>
                 </div>
             </div>
         </div>
@@ -100,12 +100,67 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // 15 Complex Questions
         const quizItems = [
-            { q: "If 4(x - 2) = 3x + 5, what is the value of x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x - 8 = 3x + 5 → x = 13." },
-            { q: "A circle has a circumference of 10π. What is its area?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r=5, Area=πr²=25π." },
-            { q: "Solve for x: 3x + y = 7 and x - y = 1.", options: ["1", "2", "3", "4"], correct: 1, exp: "Add equations: 4x = 8. x = 2." },
-            { q: "What is the slope of a line perpendicular to y = -1/2x + 10?", options: ["-2", "1/2", "2", "-1/2"], correct: 2, exp: "Negative reciprocal of -1/2 is 2." },
-            { q: "If a² + b² = 25 and ab = 12, what is (a+b)²?", options: ["37", "49", "64", "13"], correct: 1, exp: "(a+b)² = a² + b² + 2ab = 49." },
-            { q: "A rectangular prism has sides 3, 4, and height 12. Diagonal length?", options: ["10", "13", "15", "17"], correct: 1, exp: "√(3² + 4² + 12²) = 13." },
-            { q: "Sum of solutions to x² - 10x + 24 = 0?", options: ["6", "4", "10", "24"], correct: 2, exp: "-b/a = 10." },
-            { q: "If f(x) = x² - 3, what is f(x+1)?", options
+            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x-8 = 3x+5 -> x=13" },
+            { q: "Area of a circle with circumference 10π?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r=5, Area=25π" },
+            { q: "Solve for x: 3x + y = 7 and x - y = 1.", options: ["1", "2", "3", "4"], correct: 1, exp: "4x=8 -> x=2" },
+            { q: "Slope perpendicular to y = -1/2x + 10?", options: ["-2", "1/2", "2", "-1/2"], correct: 2, exp: "Negative reciprocal is 2" },
+            { q: "If a² + b² = 25 and ab = 12, what is (a+b)²?", options: ["37", "49", "64", "13"], correct: 1, exp: "a²+b²+2ab = 49" },
+            { q: "Prism sides 3, 4, 12. Diagonal length?", options: ["10", "13", "15", "17"], correct: 1, exp: "√(3²+4²+12²) = 13" },
+            { q: "Sum of roots for x² - 10x + 24 = 0?", options: ["6", "4", "10", "24"], correct: 2, exp: "-b/a = 10" },
+            { q: "If f(x) = x² - 3, what is f(x+1)?", options: ["x²-2", "x²+2x-2", "x²+2x+1", "x²-4"], correct: 1, exp: "x²+2x-2" },
+            { q: "Prob of NOT picking red from 50 (10 red)?", options: ["1/5", "2/5", "3/5", "4/5"], correct: 3, exp: "40/50 = 4/5" },
+            { q: "Simplify (x⁴)³ / x²", options: ["x⁵", "x⁷", "x¹⁰", "x¹²"], correct: 2, exp: "x¹²/x² = x¹⁰" },
+            { q: "In a right triangle, sin(A) = 3/5. Cos(A)?", options: ["3/4", "4/5", "1", "5/3"], correct: 1, exp: "cos = 4/5" },
+            { q: "Median of {2, 10, 3, 8, 5}?", options: ["3", "5", "8", "5.6"], correct: 1, exp: "Middle is 5" },
+            { q: "If g(x)=2x+1 and h(x)=x², what is h(g(2))?", options: ["25", "9", "5", "17"], correct: 0, exp: "g(2)=5, h(5)=25" },
+            { q: "Sum of interior angles of a pentagon?", options: ["360°", "540°", "720°", "180°"], correct: 1, exp: "(5-2)*180 = 540" },
+            { q: "If 3^x = 81, what is x?", options: ["3", "4", "5", "9"], correct: 1, exp: "3^4 = 81" }
+        ];
+
+        let idx = 0, score = 0, streak = 0;
+
+        function startQuiz() {
+            const container = document.getElementById('quiz-container');
+            const progress = document.getElementById('progress-bar');
+            progress.style.width = `${(idx / quizItems.length) * 100}%`;
+            if(idx >= quizItems.length) { showResults(); return; }
+            const item = quizItems[idx];
+            container.innerHTML = `
+                <p class="text-pink-500 font-bold mb-4 uppercase text-xs">Diagnostic Q${idx+1}</p>
+                <h3 class="text-2xl font-bold mb-10 leading-relaxed">${item.q}</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    ${item.options.map((opt, i) => `<div class="option-card" onclick="check(${i})">${opt}</div>`).join('')}
+                </div>
+            `;
+        }
+
+        function check(s) {
+            const item = quizItems[idx];
+            const correct = s === item.correct;
+            if(correct) { score++; streak++; } else { streak = 0; }
+            document.getElementById('streak-display').innerText = `${streak} 🔥`;
+            document.getElementById('quiz-container').innerHTML = `
+                <div class="text-center py-6">
+                    <h4 class="text-4xl font-black mb-6 ${correct ? 'text-green-400' : 'text-red-500'} italic uppercase">${correct ? 'Correct' : 'Incorrect'}</h4>
+                    <p class="mb-10 text-gray-400 italic">Logic: ${item.exp}</p>
+                    <button onclick="idx++; startQuiz();" class="bg-white text-black px-12 py-4 rounded-full font-black uppercase">Next</button>
+                </div>
+            `;
+        }
+
+        function showResults() {
+            const pct = Math.round((score/quizItems.length)*100);
+            document.getElementById('quiz-container').innerHTML = `
+                <div class="text-center py-10">
+                    <h2 class="text-5xl font-black mb-4 text-gradient uppercase italic">${pct >= 80 ? 'Ivy League Ready' : 'Elite Analyst'}</h2>
+                    <div class="text-pink-500 text-9xl font-black mb-8">${pct}%</div>
+                    <button onclick="location.reload()" class="bg-pink-600 px-12 py-4 rounded-full font-bold uppercase">Restart</button>
+                </div>
+            `;
+        }
+        startQuiz();
+    </script>
+</body>
+</html>
