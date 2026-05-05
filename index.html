@@ -6,117 +6,124 @@
     <title>Riya Gandhi | Finance Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --pink: #ff69b4; --dark: #050505; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background-color: var(--dark); color: white; font-family: sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-gradient { background: linear-gradient(to right, #ffffff, #ff69b4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .option-card { cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; }
+        .option-card { cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; transition: 0.3s; }
         .option-card:hover { border-color: var(--pink); background: rgba(255, 105, 180, 0.1); }
-        .skill-badge { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 105, 180, 0.3); padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-        #progress-bar { height: 4px; width: 0%; background: var(--pink); transition: 0.4s; }
+        .badge { background: rgba(255, 105, 180, 0.2); color: #ff69b4; padding: 4px 12px; border-radius: 99px; font-size: 12px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
-        <span class="text-xl font-extrabold text-pink-500 tracking-tighter italic">RIYA GANDHI</span>
-        <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
-            <a href="#about" class="hover:text-pink-500 transition">About</a>
-            <a href="#experience" class="hover:text-pink-500 transition">Experience</a>
-            <a href="#leadership" class="hover:text-pink-500 transition">Leadership</a>
-            <a href="#quiz" class="hover:text-pink-500 transition">SAT App</a>
+        <span class="text-xl font-bold text-pink-500">RIYA GANDHI</span>
+        <div class="space-x-4 text-xs font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-pink-500">About</a>
+            <a href="#experience" class="hover:text-pink-500">Experience</a>
+            <a href="#quiz" class="hover:text-pink-500">SAT App</a>
         </div>
     </nav>
 
     <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
-        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in">
-                <h1 class="text-7xl font-extrabold mb-6 leading-tight italic">Global <br><span class="text-gradient">Finance.</span></h1>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">Incoming IB Summer Analyst @ Mizuho. Specializing in valuation, M&A, and market analysis with a focus on Financial Institutions & Loan Capital Markets.</p>
-                <div class="flex flex-wrap gap-3 mb-10">
-                    <span class="skill-badge">Bloomberg Market Concepts</span>
-                    <span class="skill-badge">QuickBooks ProAdvisor</span>
-                    <span class="skill-badge">Equity Analysis</span>
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-6xl font-extrabold mb-6 italic">Market <span class="text-gradient">Analyst.</span></h1>
+                <p class="text-gray-400 text-lg mb-8">Incoming IB Summer Analyst @ Mizuho. Specializing in FIG & LCM valuation with a background in Tax Consulting at KPMG.</p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="badge">QuickBooks</span> <span class="badge">Bloomberg BMC</span> <span class="badge">Python</span>
                 </div>
-                <a href="#experience" class="bg-pink-600 px-8 py-4 rounded-full font-bold hover:bg-pink-500 transition shadow-lg">View Full Portfolio</a>
+                <a href="#quiz" class="bg-pink-600 px-8 py-4 rounded-full font-bold hover:bg-pink-400 transition">Take the SAT Quiz</a>
             </div>
-            <div class="relative flex justify-center fade-in">
-                <div class="absolute inset-0 bg-pink-500/10 blur-[100px] rounded-full"></div>
-                <div class="w-80 h-80 md:w-[420px] md:h-[420px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative z-10">
-                    <img src="Assets/Riya Gandhi Headshot.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Riya Gandhi">
+            <div class="flex justify-center">
+                <div class="w-80 h-80 md:w-[400px] md:h-[400px] rounded-3xl overflow-hidden border border-pink-500/20 shadow-2xl">
+                    <img src="Assets/Riya Gandhi Headshot.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Riya+Gandhi&background=ff69b4&color=fff&size=512'" class="w-full h-full object-cover" alt="Riya Gandhi">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 bg-zinc-900/20">
+    <section id="experience" class="py-20 px-6 bg-zinc-900/30">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 italic text-center">WORK <span class="text-pink-500">HISTORY</span></h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="glass p-8 rounded-2xl fade-in relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl font-black italic">01</div>
-                    <h3 class="text-2xl font-bold text-pink-500 mb-1">Mizuho Financial Group</h3>
-                    <p class="text-xs font-bold text-gray-500 mb-4 uppercase">Investment Banking Summer Analyst | NYC</p>
-                    <ul class="text-sm text-gray-400 space-y-2 list-disc pl-4">
-                        <li>Supported 2 live and 8 pitch-stage transactions totaling $4.2B+</li>
-                        <li>Built DCF and Comps models for Banking, Insurance, and Energy sectors</li>
-                        <li>Created credit memos for clients with $1B+ in AUM</li>
-                    </ul>
+            <h2 class="text-3xl font-bold mb-12 italic border-l-4 border-pink-500 pl-4 uppercase">Career & Leadership</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink-500 font-bold text-xl">Mizuho Financial Group</h3>
+                    <p class="text-xs text-gray-500 mb-4">IB Summer Analyst | NYC</p>
+                    <p class="text-sm text-gray-400">Valuation analysis for $4.2B+ in transactions across FIG and LCM rotations.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl fade-in relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl font-black italic">02</div>
-                    <h3 class="text-2xl font-bold text-pink-500 mb-1">KPMG LLP</h3>
-                    <p class="text-xs font-bold text-gray-500 mb-4 uppercase">Tax Consulting Intern | NYC</p>
-                    <ul class="text-sm text-gray-400 space-y-2 list-disc pl-4">
-                        <li>Managed Schedule K-1s for 18 Private Equity engagements</li>
-                        <li>Automated book-to-tax reconciliations using AMP platforms</li>
-                        <li>Rolled forward workpapers for multi-million dollar funds</li>
-                    </ul>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink-500 font-bold text-xl">KPMG LLP</h3>
+                    <p class="text-xs text-gray-500 mb-4">Tax Consulting Intern | NYC</p>
+                    <p class="text-sm text-gray-400">Reporting for 18 Private Equity engagements and automated book-to-tax reconciliations.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="leadership" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-            <div class="fade-in">
-                <h2 class="text-4xl font-black mb-8 italic uppercase">Campus <span class="text-pink-500">Leadership</span></h2>
-                <div class="space-y-6">
-                    <div class="border-l-2 border-pink-500 pl-6">
-                        <h4 class="font-bold text-lg italic">First Year Seminar Instructor</h4>
-                        <p class="text-sm text-gray-400 italic">Rutgers University | 25 Students</p>
-                    </div>
-                    <div class="border-l-2 border-pink-500 pl-6">
-                        <h4 class="font-bold text-lg italic">Financial Columnist @ LIBOR</h4>
-                        <p class="text-sm text-gray-400 italic">Market newsletters sent to 2,000+ readers</p>
-                    </div>
-                    <div class="border-l-2 border-pink-500 pl-6">
-                        <h4 class="font-bold text-lg italic">Blueprint VP of Publicity</h4>
-                        <p class="text-sm text-gray-400 italic">Rutgers Business School</p>
-                    </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink-500 font-bold text-xl">Rutgers LIBOR</h3>
+                    <p class="text-xs text-gray-500 mb-4">Financial Columnist</p>
+                    <p class="text-sm text-gray-400">Publishing market insights to a community of 2,000+ business students.</p>
                 </div>
-            </div>
-            <div class="glass p-8 rounded-3xl fade-in">
-                <h3 class="text-xl font-bold mb-6 italic uppercase tracking-widest text-pink-500">Interests & Hobbies</h3>
-                <div class="grid grid-cols-2 gap-4 text-xs font-bold text-gray-400">
-                    <div class="flex items-center gap-2"><i class="fas fa-parachute-box"></i> SKYDIVING</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-mask"></i> SCUBA DIVING</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-palette"></i> PAINTING</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-ice-cream"></i> ARTISAN ICE CREAM</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-pen-fancy"></i> JOURNALING</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-users"></i> BHANGRA DANCE</div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-pink-500 font-bold text-xl">Personal Interests</h3>
+                    <p class="text-xs text-gray-500 mb-4">Beyond Finance</p>
+                    <p class="text-sm text-gray-400">Skydiving, Scuba Diving, Bhangra Dance, and Artisan Ice Cream Enthusiast.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="quiz" class="py-24 px-6 bg-zinc-900/50">
+    <section id="quiz" class="py-24 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-center text-4xl font-black italic mb-12 uppercase">SAT <span class="text-pink-500">Quantitative</span> Mastery</h2>
-            <div class="glass rounded-3xl overflow-hidden fade-in border border-white/10 shadow-2xl">
-                <div id="progress-bar"></div>
-                <div id="quiz-container" class="p-12">
+            <h2 class="text-3xl font-bold mb-8 italic uppercase text-center">SAT <span class="text-pink-500">Diagnostic</span></h2>
+            <div class="glass rounded-3xl p-8 md:p-12 border border-white/10">
+                <div id="quiz-container">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+        Riya Gandhi &copy; 2024 | Finance Portfolio
+    </footer>
+
+    <script>
+        const quizItems = [
+            { q: "If 4(x - 2) = 3x + 5, what is x?", options: ["3", "13", "7", "5"], correct: 1, exp: "4x-8 = 3x+5 -> x=13" },
+            { q: "Circle circumference 10π. Area?", options: ["10π", "25π", "50π", "100π"], correct: 1, exp: "r=5, Area=25π" },
+            { q: "Solve: 3x+y=7 and x-y=1.", options: ["1", "2", "3", "4"], correct: 1, exp: "4x=8 -> x=2" },
+            { q: "Slope perp to y = -1/2x + 10?", options: ["-2", "1/2", "2", "-1/2"], correct: 2, exp: "Reciprocal is 2" },
+            { q: "If a²+b²=25 and ab=12, (a+b)²?", options: ["37", "49", "64", "13"], correct: 1, exp: "25+24=49" },
+            { q: "Prism 3, 4, 12. Diagonal?", options: ["10", "13", "15", "17"], correct: 1, exp: "√(3²+4²+12²)=13" },
+            { q: "Sum of roots x²-10x+24=0?", options: ["6", "4", "10", "24"], correct: 2, exp: "-b/a=10" },
+            { q: "f(x)=x²-3, what is f(x+1)?", options: ["x²-2", "x²+2x-2", "x²+2x+1", "x²-4"], correct: 1, exp: "x²+2x-2" },
+            { q: "Prob of NOT picking red from 50 (10 red)?", options: ["1/5", "2/5", "3/5", "4/5"], correct: 3, exp: "40/50=4/5" },
+            { q: "Simplify (x⁴)³ / x²", options: ["x⁵", "x⁷", "x¹⁰", "x¹²"], correct: 2, exp: "x¹²/x²=x¹⁰" },
+            { q: "sin(A)=3/5. Cos(A)?", options: ["3/4", "4/5", "1", "5/3"], correct: 1, exp: "4/5" },
+            { q: "Median of {2, 10, 3, 8, 5}?", options: ["3", "5", "8", "5.6"], correct: 1, exp: "Middle is 5" },
+            { q: "h(x)=x², g(x)=2x+1. h(g(2))?", options: ["25", "9", "5", "17"], correct: 0, exp: "g(2)=5, h(5)=25" },
+            { q: "Interior angles of pentagon?", options: ["360°", "540°", "720°", "180°"], correct: 1, exp: "540" },
+            { q: "If 3^x = 81, what is x?", options: ["3", "4", "5", "9"], correct: 1, exp: "3^4=81" }
+        ];
+
+        let idx = 0, score = 0;
+
+        function load() {
+            const c = document.getElementById('quiz-container');
+            if(idx >= quizItems.length) {
+                const pct = Math.round((score/quizItems.length)*100);
+                c.innerHTML = `<div class="text-center"><h2 class="text-5xl font-bold text-pink-500 mb-4">${pct}%</h2><p class="text-gray-400 mb-8 uppercase font-bold tracking-widest">${pct >= 80 ? 'Ivy League Ready' : 'Elite Analyst'}</p><button onclick="location.reload()" class="bg-pink-600 px-10 py-3 rounded-full font-bold">Restart</button></div>`;
+                return;
+            }
+            const item = quizItems[idx];
+            c.innerHTML = `<p class="text-pink-500 font-bold mb-2 uppercase text-xs">Question ${idx+1}/15</p><h3 class="text-xl font-bold mb-8">${item.q}</h3><div class="grid md:grid-cols-2 gap-4">${item.options.map((o, i) => `<div class="option-card" onclick="check(${i})">${o}</div>`).join('')}</div>`;
+        }
+
+        function check(s) {
+            if(s === quizItems[idx].correct) score++;
+            document.getElementById('quiz-container').innerHTML = `<div class="text-center py-4"><h4 class="text-2xl font-bold mb-4 uppercase italic">Next Step</h4><p class="text-gray-500 mb-8 italic">Logic: ${quizItems[idx].exp}</p><button onclick="idx++; load();" class="bg-white text-black px-10 py-2 rounded-full font-bold">Continue</button></div>`;
+        }
+        load();
+    </script>
+</body>
+</html>
